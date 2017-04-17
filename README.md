@@ -14,14 +14,14 @@ The example demonstrates the following:
 * When the windows service starts you can see the member join the cluster.
 * When you ask the member to leave you can see the windows service stops.  
 
-##Projects  
+## Projects  
 Remember to start all of the projects up to see the full effect!  
 
-###WinForms  
+### WinForms  
 Shows the state of the cluster from its point of view.  
 
-###Website  
-#####This project has 4 endpoints:  
+### Website  
+##### This project has 4 endpoints:  
 * http://localhost:8088/#/akka/report  
 	Reports the state of the cluster from its point of view.  
 	The state is scheduled to be sent from the SignalRClusterStatusActor -> SignalR.ClusterStateHub -> Webpage  
@@ -38,18 +38,18 @@ Shows the state of the cluster from its point of view.
 * http://localhost:8088/#/akka/servicestatus  
 	This page allows you to see the status of the services and the option to start or stop the services.	
 
-###Tasker
+### Tasker
 Schedules a set of jobs and have those jobs repeat every x seconds.  
 Create the "Job" which is then deployed onto the Worker node.  
 Allows other cluster members to subscribe to all Jobs running for status updates.   
 		
-###Worker
+### Worker
 Plain cluster member ready for the tasker to task work off to.  
 Demonstrates clean exit when itself is removed from the cluster.  
 The worker will get a set of records and then process those records.  
 Report back what the status of the work back to the Tasker.  
 
-###WorkerWithWebApi
+### WorkerWithWebApi
 You can only run one instance of this as the website port is hardcoded.  
 You must also run it as an adminstrator.  
 Creating your services similar to this will allow you to view that members current state.  
@@ -63,15 +63,15 @@ Start all of the projects up, then open up your favorite browser and navigate to
 http://localhost:8080/api/ClusterStatus/1
 This will give you the JSON results of the worker member.  
 		
-###Lighthouse
+### Lighthouse
 Added for easy setup of a cluster.   You should always run 2 or more.  
 
-###SharedLibrary  
+### SharedLibrary  
 Contains the messages, shared paths and actors used in the above projects.  
 
 
 <br/><br/>
-###Common Akka Links to help you along with your Akka adventure!  
+### Common Akka Links to help you along with your Akka adventure!  
 <b>Main Site:</b> http://getakka.net/  
 <b>Documentation:</b> http://getakka.net/docs/  
 <b>The Code (includes basic examples):</b> https://github.com/akkadotnet/getakka.net  
